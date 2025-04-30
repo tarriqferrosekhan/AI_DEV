@@ -58,7 +58,12 @@ def search(query, index, model, chunks, k=5):
 # === Step 5: OpenAI LLM ===
 def ask_openai(query, context_chunks):
     context = "\n\n".join(f"Source: {chunk['source']} (Page {chunk['page']})\n{chunk['text']}" for chunk in context_chunks)
-    prompt = f"Use the following context to answer the question:\n\n{context}\n\nQuestion: {query}"
+    prompt = """
+    "You are an assistant answering questions **only** using the information provided below. "
+    "Do not use any outside knowledge. "
+    "If the answer is not in the context, say 'I don't know based on the provided information.'\n\n"
+    Use the following context to answer the question:\n\n{context}\n\nQuestion: {query}
+    """
     client = OpenAI(api_key=OpenAI.api_key)  # Or rely on environment variable
     response = client.chat.completions.create(
         model="gpt-4",
@@ -92,10 +97,23 @@ def main():
             print("👋 Exiting.")
             break
         top_chunks = search(query, index, model, all_chunks, TOP_K)
-        answer = ask_openai(query, top_chunks)
-        print(f"\n🧾 Answer:\n{answer}\n")
+        if moderation_check(query)!="Flagged":
+            answer = ask_openai(query, top_chunks)
+            print(f"\n🧾 Answer:\n{answer}\n")
+        else:
+            print("sorry your query cannot be processed as its Flagged")
 
+
+def moderation_check(user_input):
+    # Call the OpenAI API to perform moderation on the user's input.
+    response = openai.moderations.create(input=user_input)
+    #print(response)
+    # Extract the moderation result from the API response.
+    moderation_output = response.results[0].flagged
+    # Check if the input was flagged by the moderation system.
+    if response.results[0].flagged == True:
+        return "Flagged"
+    else:
+        return "Not Flagged"
 
 main()
-# if __name__ == "__main__":
-#     main()
