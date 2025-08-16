@@ -1,3 +1,4 @@
+#[WIP]
 ### Introduction to RAG Application
 ### HelpMateAI.Books
 #### Application Architecture
