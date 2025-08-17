@@ -56,11 +56,6 @@ class BooksRAG:
 			return Utils.Keys.NotFlagged
 
 	def llamaindex_intent_confirmation_layer(self,prompt_query):
-		# documents = []
-		# df=self.DataSource
-		# for idx, row in df.iterrows():
-		# 	content = "\n".join([f"{col}: {row[col]}" for col in self.important_columns])
-		# 	documents.append(Document(text=content, metadata={"row": idx}))
 		index = VectorStoreIndex.from_documents(self.Documents)
 		_llm=OpenAI(model=self.appconfig.base_llm, temperature=0)
 		Settings.llm = OpenAI(model=self.appconfig.base_llm, temperature=0)
