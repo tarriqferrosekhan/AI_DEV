@@ -2,5 +2,6 @@
     "moderation_model":"omni-moderation-latest",
     "data_source_file_name":"books_gpt.csv",
     "api_key_file_name":"OpenAI_API_Key.txt",
-    "base_llm":"gpt-3.5-turbo"
+    "base_llm":"gpt-3.5-turbo",
+    "similarity_top_k":10
 }

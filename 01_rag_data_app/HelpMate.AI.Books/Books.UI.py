@@ -36,7 +36,6 @@ def showProductRecommendation(filtered_df):
         st.warning("No Data Found!")
 
 def displayMessage(message,message_type:MessageType=MessageType.Simple):
-    message_type=message_type.lower().strip()
     if message_type==MessageType.Simple:
         st.write(message)
     elif message_type==MessageType.Info:

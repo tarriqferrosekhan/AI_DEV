@@ -20,6 +20,7 @@ class BooksRAG:
 		self.important_columns = ['Genre', 'Publication Year', 'Page Count', 'Price (INR)']
 		self.RecommendedAttributes="'Genre', 'Publication Year', 'Page Count', 'Price (INR)'"
 		self.DataSource=pd.DataFrame([])
+		self.Documents=[]
 		self.Init()
 
 	def Init(self):
@@ -29,6 +30,7 @@ class BooksRAG:
 			openai.api_key = ' '.join(f.readlines())
 		self.path_books=self.path_books+self.appconfig.data_source_file_name
 		self.GetSourceData()
+		self.CreateDocuments()
 
 	def	GetSourceData(self):
 		col_Price='Price (INR)'
@@ -36,6 +38,12 @@ class BooksRAG:
 		df[col_Price] = df[col_Price].str.replace(',', '').astype(int)
 		self.DataSource=df
 		return self.DataSource
+	
+	def CreateDocuments(self):
+		for idx, row in self.DataSource.iterrows():
+			content = "\n".join([f"{col}: {row[col]}" for col in self.important_columns])
+			self.Documents.append(Document(text=content, metadata={"row": idx}))
+
 
 	def moderation_check(self,user_input):
 		# Call the OpenAI API to perform moderation on the user's input.
@@ -48,12 +56,13 @@ class BooksRAG:
 			return Utils.Keys.NotFlagged
 
 	def llamaindex_intent_confirmation_layer(self,prompt_query):
-		documents = []
-		df=self.DataSource
-		for idx, row in df.iterrows():
-			content = "\n".join([f"{col}: {row[col]}" for col in self.important_columns])
-			documents.append(Document(text=content, metadata={"row": idx}))
-		index = VectorStoreIndex.from_documents(documents)
+		# documents = []
+		# df=self.DataSource
+		# for idx, row in df.iterrows():
+		# 	content = "\n".join([f"{col}: {row[col]}" for col in self.important_columns])
+		# 	documents.append(Document(text=content, metadata={"row": idx}))
+		index = VectorStoreIndex.from_documents(self.Documents)
+		_llm=OpenAI(model=self.appconfig.base_llm, temperature=0)
 		Settings.llm = OpenAI(model=self.appconfig.base_llm, temperature=0)
 		binary_prompt = PromptTemplate(
 			"You are verifying product specifications based ONLY on the following context.\n"
@@ -65,13 +74,14 @@ class BooksRAG:
 			"Answer:"
 		)
 		query_engine = index.as_query_engine(
+				llm=_llm,
 				text_qa_template=binary_prompt,
-			similarity_top_k=10  # search top 3 most similar entries
+			similarity_top_k=self.appconfig.similarity_top_k 
 		)
 		# Query
 		response = query_engine.query(prompt_query)
 		retrieved_nodes=query_engine.retrieve(prompt_query)
-		return response,retrieved_nodes,documents
+		return response,retrieved_nodes,self.Documents
 
 	def compute_match_score(self,doc_text, query_text):
 		total_score = 0
@@ -150,32 +160,6 @@ class BooksRAG:
 					_appMessage.Message_Type=MessageType.Warnings
 				else:
 					filtered_df=self.information_extraction(scored_results)
-					_appMessage.Data=filtered_df
+					_appMessage.Data=filtered_df.drop_duplicates()
 					_appMessage.Message_Type=MessageType.Success
 		return _appMessage
-        # response_intent,retrieved_nodes,documents=booksrag.llamaindex_intent_confirmation_layer(query)
-        # if response_intent.response=='No':
-        #     displayWarning(Utils.Messages.CannotProcess)
-        #     return
-        # scored_results=booksrag.mapProductsByScoring(retrieved_nodes,query)
-        # if len(scored_results)==0:
-        #     # index = SummaryIndex.from_documents(documents)
-        #     # # Create a query engine
-        #     # summary_prompt = PromptTemplate(
-        #     #     "You are verifying product specifications based ONLY on the following context.\n"
-        #     #     "Be strictly based on context. Do not guess.\n"
-        #     #     "Context:\n{context_str}\n\n"
-        #     #     "Question: {query_str}\n"
-        #     #     "Answer:"
-        #     # )
-        #     # query_engine = index.as_query_engine(text_qa_template=summary_prompt)
-        #     # # Query the index for a summary
-        #     # response = query_engine.query(query)
-        #     # if response!=None:
-        #     #     #st.write("SummaryIndex")
-        #     #     st.write(response.response)
-        #     # else:
-        #     st.warning(Utils.Messages.RewordPrompt.format(booksrag.RecommendedAttributes))
-        # if len(scored_results)>0:
-        #     filtered_df=booksrag.information_extraction(scored_results)
-
