@@ -35,17 +35,21 @@
     11. Response with retreived Nodes and Documents is returned. 
 5. **Product Mapping, Scoring and Result**:
    1. Expects Few Attributes as mandatory attributes in the User Prompt.
-   2. Basis the Match of User Prompt and Document Nodes a Scoring is done.
-   3. Basis the Score the Node is retrieved and returns results.
+   2. If user out of context shows warning.
+   3. Basis the Match of User Prompt and Document Nodes a Scoring is done.
+   4. Basis the Score the Node is retrieved and returns results.
+   5. Tested successfully for [Prompt Injection](https://www.ibm.com/think/topics/prompt-injection) and [Jailbreak prompts - DAN, STAN, DUDE & Mongo Tom](https://gist.github.com/coolaj86/6f4f7b30129b0251f61fa7baaa881516)
 6. **App Demo**<br>
 **Information Extraction**<br>
   ![app_demo_information_extraction](https://github.com/user-attachments/assets/e8eb918d-97eb-4414-8c45-28fde3ac6f88)
- **Moderation Check**:<br>
+ **Tested for Moderation**:<br>
   ![app_demo_moderation_check](https://github.com/user-attachments/assets/69c540e1-ae8e-490d-ad9d-a2481a416793)
-**Prompt Injection Handled**<br>
+**Tested for Prompt Injection attack prevention**<br>
   ![app_demo_prompt_injection](https://github.com/user-attachments/assets/89453c14-7f81-45e3-91b6-df002db2f828)
-   
-
+**Tested for Jail Break Prompts (DAN, STAN, DUDE and Mongo Tom Prompt)**<br>   
+**Tested for Mongo Tom Prompt** <br>
+![app_demo_JAILBreak_MongoTom](https://github.com/user-attachments/assets/bea0b58d-8abe-472b-89d9-2f92355acb66)
+**Tested for DAN , STAN, DUDE** <br>
       
 
 
