@@ -38,7 +38,7 @@
    2. If user out of context shows warning.
    3. Basis the Match of User Prompt and Document Nodes a Scoring is done.
    4. Basis the Score the Node is retrieved and returns results.
-   5. Tested successfully for [Prompt Injection](https://www.ibm.com/think/topics/prompt-injection) and [Jailbreak prompts - DAN, STAN, DUDE & Mongo Tom](https://gist.github.com/coolaj86/6f4f7b30129b0251f61fa7baaa881516)
+   5. Tested successfully for [Prompt Injection](https://www.ibm.com/think/topics/prompt-injection) and [Jailbreak prompts](https://github.com/0xk1h0/ChatGPT_DAN)
 6. **App Demo**<br>
 **Information Extraction**<br>
   ![app_demo_information_extraction](https://github.com/user-attachments/assets/e8eb918d-97eb-4414-8c45-28fde3ac6f88)
