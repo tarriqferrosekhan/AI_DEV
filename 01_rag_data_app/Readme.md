@@ -14,6 +14,8 @@
 
 #### HelpMateAI.Books RAG Application
 1. This [application](https://github.com/tarriqferrosekhan/AI_DEV/tree/main/01_rag_data_app/HelpMate.AI.Books) is built using : OpenAI - [GPT 3.5 turbo](https://platform.openai.com/docs/models/gpt-3.5-turbo) and [LLAMAINDEX](https://docs.llamaindex.ai/en/stable/module_guides/indexing/vector_store_index/)'s Vector and Summary Indexes
+2. Please Create an account in Open AI and use your own Key and ensure to place it locally in the file OpenAI_API_Key.txt securely (and not publicise it)
+   
 ##### Application Architecture
 <img width="1215" height="678" alt="image" src="https://github.com/user-attachments/assets/f1622cc8-b15b-46e4-8688-443def1dc9c6" />
 
@@ -44,13 +46,28 @@
   ![app_demo_information_extraction](https://github.com/user-attachments/assets/e8eb918d-97eb-4414-8c45-28fde3ac6f88)
  **Tested for Moderation**:<br>
   ![app_demo_moderation_check](https://github.com/user-attachments/assets/69c540e1-ae8e-490d-ad9d-a2481a416793)
-**Tested for Prompt Injection attack prevention**<br>
+**Prompt Injection attack Testing**<br>
   ![app_demo_prompt_injection](https://github.com/user-attachments/assets/89453c14-7f81-45e3-91b6-df002db2f828)
-**Tested for Jail Break Prompts (DAN, STAN, DUDE and Mongo Tom Prompt)**<br>   
-**Tested for Mongo Tom Prompt** <br>
-TBD
-**Tested for DAN , STAN, DUDE** <br>
-      
+**JailBreak Testing: DAN Prompt** <br>
+![app_demo_JAILBreak_DAN_Prompt](https://github.com/user-attachments/assets/ebf1abb3-8356-4071-9cd8-b0b978e08419)
+**JailBreak Testing: DUDE Prompt** <br>
+![app_demo_JAILBreak_DUDE_Prompt](https://github.com/user-attachments/assets/ab9ae508-f846-4006-8f14-3eff2b5cbaf9)
+**JailBreak Testing: STAN Prompt** <br>
+![app_demo_JAILBreak_STAN_Prompt](https://github.com/user-attachments/assets/8f58c54a-6f48-4252-9173-f9b787963b93)
+**JailBreak Testing: Mongo Tom Prompt** <br>
+![app_demo_JAILBreak_MongoTom](https://github.com/user-attachments/assets/a95023ca-ea3f-4cd6-b99b-0429c8af3656)
+
+Watch out this space for more on AI Development.
+Upcoming : 
+1. Agentic RAG - Same BooksApp implemented as Agentic RAG.
+2. Vector Databases
+3. MCP
+4. Testing Frameworks for AI
+5. & More
+
+Happy Coding, 
+[Tarriq Ferrose Khan](www.linkedin.com/in/tarriq-ferrose-khan-ba527080)
+
 
 
 
