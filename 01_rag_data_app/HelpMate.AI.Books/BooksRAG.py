@@ -50,12 +50,18 @@ class BooksRAG:
 		response = openai.moderations.create(model=self.appconfig.moderation_model,input=user_input)
 		# Extract the moderation result from the API response.
 		# Check if the input was flagged by the moderation system.
+		print("moderation.response",response)
 		if response.results[0].flagged == True:
 			return Utils.Keys.Flagged
 		else:
 			return Utils.Keys.NotFlagged
 
 	def llamaindex_intent_confirmation_layer(self,prompt_query):
+		# documents = []
+		# df=self.DataSource
+		# for idx, row in df.iterrows():
+		# 	content = "\n".join([f"{col}: {row[col]}" for col in self.important_columns])
+		# 	documents.append(Document(text=content, metadata={"row": idx}))
 		index = VectorStoreIndex.from_documents(self.Documents)
 		_llm=OpenAI(model=self.appconfig.base_llm, temperature=0)
 		Settings.llm = OpenAI(model=self.appconfig.base_llm, temperature=0)
@@ -75,6 +81,7 @@ class BooksRAG:
 		)
 		# Query
 		response = query_engine.query(prompt_query)
+		print("intent.response",response)
 		retrieved_nodes=query_engine.retrieve(prompt_query)
 		return response,retrieved_nodes,self.Documents
 
@@ -145,7 +152,7 @@ class BooksRAG:
 			_appMessage.Message_Type=MessageType.Warnings
 		else:
 			response_intent,retrieved_nodes,documents=self.llamaindex_intent_confirmation_layer(query)
-			if response_intent.response=='No':
+			if response_intent.response.lower()!='yes':
 				_appMessage.Response_Message=Utils.Messages.CannotProcess
 				_appMessage.Message_Type=MessageType.Warnings
 			else:
