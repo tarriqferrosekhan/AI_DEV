@@ -48,7 +48,7 @@
   ![app_demo_prompt_injection](https://github.com/user-attachments/assets/89453c14-7f81-45e3-91b6-df002db2f828)
 **Tested for Jail Break Prompts (DAN, STAN, DUDE and Mongo Tom Prompt)**<br>   
 **Tested for Mongo Tom Prompt** <br>
-![app_demo_JAILBreak_MongoTom](https://github.com/user-attachments/assets/bea0b58d-8abe-472b-89d9-2f92355acb66)
+TBD
 **Tested for DAN , STAN, DUDE** <br>
       
 
