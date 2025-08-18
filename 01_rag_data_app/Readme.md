@@ -37,7 +37,11 @@
    1. Expects Few Attributes as mandatory attributes in the User Prompt.
    2. Basis the Match of User Prompt and Document Nodes a Scoring is done.
    3. Basis the Score the Node is retrieved and returns results.
-   
+6. **App Demo**
+   1. ![app_demo_information_extraction](https://github.com/user-attachments/assets/e8eb918d-97eb-4414-8c45-28fde3ac6f88)
+
+   2. 
+
       
 
 
