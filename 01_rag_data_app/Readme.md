@@ -66,7 +66,7 @@ Upcoming :
 5. & More
 
 Happy Coding, 
-[Tarriq Ferrose Khan](www.linkedin.com/in/tarriq-ferrose-khan-ba527080)
+[Tarriq Ferrose Khan](https://www.linkedin.com/in/tarriq-ferrose-khan-ba527080)
 
 
 
