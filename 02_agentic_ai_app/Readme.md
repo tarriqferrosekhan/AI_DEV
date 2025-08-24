@@ -50,6 +50,17 @@ An agent may use tools, memory, and specialized skills to complete its assignmen
       <td><a href='https://docs.llamaindex.ai/en/stable/understanding/workflows/' target='_blank'>Workflow</a></td>
     </tr>
     <tr>
+      <td>
+        Sample Code
+      </td>
+      <td>
+        TBD
+      </td>
+      <td>
+        TBD
+      </td>
+    </tr>
+    <tr>
       <td>Purpose</td>
       <td>Agents are designed for dynamic decision-making and tool use</td>
       <td>Workflows define deterministic, step-by-step pipelines.</td>
@@ -67,17 +78,8 @@ An agent may use tools, memory, and specialized skills to complete its assignmen
         - <b>The Flow is developer-defined, not LLM-driven.</b>
       </td>
     </tr>
+    
     <tr>
-      <td>
-        Sample Code
-      </td>
-      <td>
-        [TBD]
-      </td>
-      <td>
-        [TBD]
-        
-      </td>
       <td>
         Best for
       </td>
