@@ -36,4 +36,8 @@
     </tr>
   </table>
  </li>
+ <li>So what's the Benefit of Agentic AI here: 
+   - Application Logic is not Predefined.
+   - UI Will render only that Widget (say, register User) that the User is intended to interact with.
+ </li>
  </ol>
