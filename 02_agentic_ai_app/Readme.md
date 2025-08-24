@@ -1,5 +1,7 @@
+Author: [TarriqFerroseKhan](www.linkedin.com/in/tarriq-ferrose-khan-ba527080)
 ### Agentic AI App Development
 #### Introduction
+<b>This Article details the Agentic AI, AI Agents (using LLAMAINDEX) and demonstrates a sample app.</b>
 <ol>
   <li>Pre-Read:<br>
     <a href='https://arxiv.org/abs/2505.10468'>AI Agents vs. Agentic AI</a> </li><br>
@@ -39,26 +41,11 @@ An agent may use tools, memory, and specialized skills to complete its assignmen
     </tr>
   </table>
  </li>
-  <li><b>What are the ✅ Pros of an AI Agent ?</b><br>
-   - Application Logic is not Predefined.<br>
-   - <b>Enables User Centred App Flow </b><br>
-   - Can enable rendering the that part of the UI (Widget - say, register User) that the User needs <br>
-   - For instance, when user says "register me" only (then) registration form is displayed.
-  </li>
-  <li><b>What are the ❌ Cons of an AI Agent ?</b><br>
-   - <b>Probabilistic</b> - Harder to enforce strict control flow.<br>
-   - May hallucinate tool calls if not grounded well.<br>
-   - Debugging reasoning steps can be tricky.<br>
-  </li>
-  <li>
-    <b>Any Alternative to make it more deterministic?</b><br>
-    - Yes, you can use <a href='https://docs.llamaindex.ai/en/stable/understanding/workflows/' target='_blank'>Workflows</a>
-  </li>
-  <li><b>Difference between Agent and WorkFlow</b><br>
+ <li><b>Difference between LlamaIndex Agent and WorkFlow?</b><br>
   <table>
     <tr>
       <td>Sections</td>
-      <td>Agent</td>
+      <td><a href='https://docs.llamaindex.ai/en/stable/use_cases/agents/'  target='_blank'>Agent</a></td>
       <td>WorkFlow</td>
     </tr>
     <tr>
