@@ -79,6 +79,46 @@ An agent may use tools, memory, and specialized skills to complete its assignmen
         - <b>The Flow is developer-defined, not LLM-driven.</b>
       </td>
     </tr>
+    <tr>
+      <td>
+        Best for
+      </td>
+      <td>
+        - Natural conversations where the LLM has to pick the right tool.<br>
+        - Cases where logic is not strictly sequential (e.g., chatbot, Q&A, multi-tool workflows).<br>
+      </td>
+      <td>
+      - Business processes, multi-step forms, approvals, UI-driven flows.<br>
+      - Agentic RAG pipelines with well-defined stages (retrieval → reasoning → response).<br>
+      </td>
+    </tr>
+    <tr>
+      <td>✅ Pros</td>
+      <td>
+        - Flexible, LLM decides dynamically.<br>
+        - Faster to implement.<br>
+        - Works well when tasks are loosely structured.<br>
+      </td>
+      <td>
+      - Deterministic and predictable.<br>
+      - Easier to debug.<br>
+      - Good for UI workflows (registration, issue handling, etc.).<br>
+      </td>
+    </tr>
+    <tr>
+      <td>❌ Cons</td>
+      <td>
+        - Harder to enforce strict control flow.<br>
+        - May hallucinate tool calls if not grounded well.<br>
+        - Debugging reasoning steps can be tricky.<br>
+      </td>
+      <td>
+        - More boilerplate.<br>
+        - Less flexible — flow is fixed, not adaptive.<br>
+        - Overkill for simple tasks.
+      </td>
+    </tr>
+    
   </table>
   </li>
  </ol>
