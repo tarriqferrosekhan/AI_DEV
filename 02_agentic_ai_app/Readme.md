@@ -28,6 +28,8 @@
           <li>your enterprise data (books_gpt.csv) was exposed to LLM</li>
           <li>Via UI you interacted with your data to extract information based on certain conditions</li>
           <li><b>But Managing Application Logic Flow was not possible. </b></li>
+          <li>For eg., when user says "register me" the user defined function <b>register()</b> will be trigger</li>
+          
         </ul>
       </td>
       <td>
@@ -35,8 +37,6 @@
           <li>You write User Defined Functions like Register, IssueBook, ReturnBook etc</li>
           <li>Expose your methods to an AI Agent</li>
           <li>Pass the User's prompt to AI Agent , which in-turn will call your method</li>
-          
-          
         </ul>
       </td>
     </tr>
