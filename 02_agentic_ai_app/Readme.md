@@ -13,7 +13,7 @@ An agent may use tools, memory, and specialized skills to complete its assignmen
   <li><h3>In Simple terms tell me what an AI Agent does?</h3>
     <ul>
      <li>Reads User's Prompt</li>
-     <li>Calls the Corresponding User Defined Function via an AI Agent Configuration</li>
+     <li>Calls the Corresponding User Defined Function via an AI Agent (or Worflow)</li>
      <li>This User Defined Function executes your application's logic</li>
     </ul>
   </li>
@@ -29,7 +29,7 @@ An agent may use tools, memory, and specialized skills to complete its assignmen
       <td>
         - Your enterprise data (books_gpt.csv) was exposed to LLM.<br>
         - Via UI you interacted with your data to extract information based on certain conditions.<br>
-        - <b>But Managing Application Logic Flow was not possible. </b><br>
+        - <b>But Managing Application Logic Flow was not intended. </b><br>
       </td>
       <td>
           - You write User Defined Functions & Expose your methods to an <a href='https://docs.llamaindex.ai/en/stable/use_cases/agents/'  target='_blank'>AI Agent</a> or a <a href='https://docs.llamaindex.ai/en/stable/understanding/workflows/' target='_blank'>Workflow</a><br>
@@ -53,5 +53,32 @@ An agent may use tools, memory, and specialized skills to complete its assignmen
   <li>
     <b>Any Alternative to make it more deterministic?</b><br>
     - Yes, you can use <a href='https://docs.llamaindex.ai/en/stable/understanding/workflows/' target='_blank'>Workflows</a>
+  </li>
+  <li><b>Difference between Agent and WorkFlow</b><br>
+  <table>
+    <tr>
+      <td>Sections</td>
+      <td>Agent</td>
+      <td>WorkFlow</td>
+    </tr>
+    <tr>
+      <td>Purpose</td>
+      <td>Agents are designed for dynamic decision-making and tool use</td>
+      <td>Workflows define deterministic, step-by-step pipelines.</td>
+    </tr>
+    <tr>
+      <td>How It Works </td>
+      <td>
+        - Write and Configure a Set of tools/functions (e.g., SQL query engine, search tool, custom function)<br>
+        - The LLM decides when and which tool (Eg., User Defined Function) to call, based on the user prompt.<br>
+        - Typically uses reasoning traces (like <a href="https://www.ibm.com/think/topics/react-agent">ReAct</a>) or function-calling to orchestrate.<br>
+      </td>
+      <td>
+        - Explicitly define steps (@step) and transitions (via Event / StopEvent).<br>
+        - The Workflow engine executes steps in a controlled order.<br>
+        - <b>The Flow is developer-defined, not LLM-driven.</b>
+      </td>
+    </tr>
+  </table>
   </li>
  </ol>
