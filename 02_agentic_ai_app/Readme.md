@@ -1,11 +1,5 @@
 ### Agentic AI App Development
 #### Introduction
-
-*Please Note the Fundamental Difference in AI app dev vs classical App Dev is*
-<ul>
-  <li>AI App Dev - probabilistic (Let LLM and Frameworks decide the flow and execute it)</li>
-  <li>Classical App Dev - deterministic (App Logic is predefined)</li>
-</ul>
 <ol>
   <li><h3>In Simple terms tell me what an AI Agent does?</h3>
     <ul>
@@ -29,17 +23,21 @@
         - <b>But Managing Application Logic Flow was not possible. </b><br>
       </td>
       <td>
-          - You write User Defined Functions & Expose your methods to an AI Agent<br>
+          - You write User Defined Functions & Expose your methods to an <a href='https://docs.llamaindex.ai/en/stable/use_cases/agents/'  target='_blank'>AI Agent</a> or a <a href='https://docs.llamaindex.ai/en/stable/understanding/workflows/' target='_blank'>Workflow</a><br>
           - Pass the User's prompt to AI Agent , which in-turn will (or supposed to) call your method<br>
           - For eg., when user says "register me" the user defined function <b>register()</b> will be triggered by the Agent<br>
       </td>
     </tr>
   </table>
  </li>
- <li><b>So what's the Benefit of Agentic AI here?</b><br> 
+ <li><b>Difference between an Agent and Workflow ,  are the Pros and Cons here here?</b><br> 
+   ✅ Pros<br>
    - <b>Enables User Centred App Design and can evolve over the period of time.</b><br>
    - Application Logic is not Predefined.<br>
    - UI Will render only that Widget (say, register User) that the User is intended to interact with.<br>
-   - 
+   
  </li>
+ <li>
+   
+ </li> 
  </ol>
