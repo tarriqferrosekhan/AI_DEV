@@ -1,4 +1,4 @@
-Author: [TarriqFerroseKhan](www.linkedin.com/in/tarriq-ferrose-khan-ba527080)
+Author: [TarriqFerroseKhan](https://www.linkedin.com/in/tarriq-ferrose-khan-ba527080)
 ### Agentic AI App Development
 #### Introduction
 <b>This Article details the Agentic AI, AI Agents (using LLAMAINDEX) and demonstrates a sample app.</b>
