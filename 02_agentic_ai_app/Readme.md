@@ -69,6 +69,16 @@ An agent may use tools, memory, and specialized skills to complete its assignmen
     </tr>
     <tr>
       <td>
+        Sample Code
+      </td>
+      <td>
+        [TBD]
+      </td>
+      <td>
+        [TBD]
+        
+      </td>
+      <td>
         Best for
       </td>
       <td>
