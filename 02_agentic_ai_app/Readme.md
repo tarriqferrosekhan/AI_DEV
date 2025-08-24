@@ -37,5 +37,3 @@
   </table>
  </li>
  </ol>
- </ol> Agentic Tools (FunctionAgent
-2. WorkFlow to build 
