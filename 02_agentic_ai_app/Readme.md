@@ -9,7 +9,7 @@
   </ol>
 </li>
 <li>
-  <b>How this AI Agent differs from the [OpenAI LLM](https://platform.openai.com/docs/models)  we built earlier?</b>
+  <b>How this AI Agent differs from the <a href='https://github.com/tarriqferrosekhan/AI_DEV/tree/main/01_rag_data_app/HelpMate.AI.Books' target='_blank'>HelpMate.AI.Books</a> RAG application we built earlier?</b>
   
 </li>
 <li><b>So how does An Agent Configuration would look like?</b>
