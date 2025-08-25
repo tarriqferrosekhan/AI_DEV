@@ -20,7 +20,8 @@ It orchestrates the activity of individual AI agents and adapts its strategy bas
 <b>AI agents:</b> The individual, task-specific components that execute the sub-tasks required by the agentic AI framework.<br>
 An agent may use tools, memory, and specialized skills to complete its assignment. 
 </p>
-  
+</ol>
+<ol>
   <li><h3>In Simple terms tell me what an AI Agent does?</h3>
     <ul>
      <li>Reads User's Prompt</li>
