@@ -1,8 +1,9 @@
-# WIP - Yet to be Published.
 Author: [TarriqFerroseKhan](https://www.linkedin.com/in/tarriq-ferrose-khan-ba527080)
 ### Agentic AI App Development
 #### Introduction
 <b>This Article details the Agentic AI, AI Agents (using LLAMAINDEX) and demonstrates a sample app.</b><br>
+<img width="1227" height="632" alt="image" src="https://github.com/user-attachments/assets/dc054af1-64fc-4bf5-a3a9-d2ef86fe445e" />
+
 <b>Pre-Read:</b><br>
 <ol>
   <li>
