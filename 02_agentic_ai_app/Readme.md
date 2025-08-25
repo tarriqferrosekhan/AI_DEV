@@ -21,12 +21,14 @@ It orchestrates the activity of individual AI agents and adapts its strategy bas
 An agent may use tools, memory, and specialized skills to complete its assignment. 
 </p>
 </ol>
+<b><u>Details</u></b><br>
+
 <ol>
-  <li><h3>In Simple terms tell me what an AI Agent does?</h3>
+  <li><h3>In Simple terms tell me how AI Agent works?</h3>
     <ul>
-     <li>Reads User's Prompt</li>
-     <li>Calls the Corresponding User Defined Function via an AI Agent (or Worflow)</li>
-     <li>This User Defined Function executes your application's logic</li>
+     <li>User's Prompt to an AI Agent (or Worflow)</li>
+     <li>AI Agent (or Worflow) using LLM interprets which (User-Defined) Function from the configuration to call </li>
+     <li>Triggers the corresponding function which executes your application's logic</li>
     </ul>
   </li>
   <li>
