@@ -114,7 +114,7 @@ An agent may use tools, memory, and specialized skills to complete its assignmen
         <a href="https://github.com/tarriqferrosekhan/AI_DEV/blob/main/02_agentic_ai_app/AgentApp/agent_books.py">Agent Sample Code</a>
       </td>
       <td>
-        Workflow Code
+        <a href="https://github.com/tarriqferrosekhan/AI_DEV/blob/main/02_agentic_ai_app/WorkFlowApp/workflow_books.py">Workflow</a>
       </td>
     </tr>
   </table>
