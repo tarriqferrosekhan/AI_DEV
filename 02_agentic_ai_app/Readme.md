@@ -3,14 +3,16 @@ Author: [TarriqFerroseKhan](https://www.linkedin.com/in/tarriq-ferrose-khan-ba52
 ### Agentic AI App Development
 #### Introduction
 <b>This Article details the Agentic AI, AI Agents (using LLAMAINDEX) and demonstrates a sample app.</b>
+<b>Pre-Read:</b><br>
 <ol>
-  <li>Pre-Read:<br>
-    <a href='https://arxiv.org/abs/2505.10468'>AI Agents vs. Agentic AI</a> 
-  </li>
   <li>
     <a href="https://www.ibm.com/think/topics/reinforcement-learning" target="_blank">What is reinforcement learning?</a>
 
   </li>
+    <li>
+    <a href='https://arxiv.org/abs/2505.10468'>AI Agents vs. Agentic AI</a> 
+  </li>
+
   <br>
 <p>
 <b>Agentic AI:</b> The comprehensive system that exhibits autonomy, reasoning, and planning to achieve a complex, high-level goal.<br>
