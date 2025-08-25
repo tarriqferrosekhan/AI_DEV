@@ -26,7 +26,7 @@ An agent may use tools, memory, and specialized skills to complete its assignmen
 <ol>
   <li><h3>In Simple terms tell me how AI Agent works?</h3>
     <ul>
-     <li>User's Prompt to an AI Agent (or Worflow)</li>
+     <li>User's Prompt is sent to an AI Agent (or Worflow) (Eg.,agent.run(query))</li>
      <li>AI Agent (or Worflow) using LLM interprets which (User-Defined) Function from the configuration to call </li>
      <li>Triggers the corresponding function which executes your application's logic</li>
     </ul>
