@@ -106,8 +106,17 @@ An agent may use tools, memory, and specialized skills to complete its assignmen
         - Overkill for simple tasks.
       </td>
     </tr>
+    <tr>
+      <td>
+        Sample Code
+      </td>
+      <td>
+        Agent Code
+      </td>
+      <td>
+        Workflow Code
+      </td>
+    </tr>
   </table>
   </li>
-  <li><b>Sample Code?</b> - WIP
-  </li>
- </ol>
+  </ol>
