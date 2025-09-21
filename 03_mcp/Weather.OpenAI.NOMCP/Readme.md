@@ -8,4 +8,5 @@
   **uvicorn server:app --reload --host 0.0.0.0 --port 8000**
   
 4. Open another terminal (from the same location where Client.py is saved) and run below command to launch the client
-   py client.py 
+   
+   **py client.py**
