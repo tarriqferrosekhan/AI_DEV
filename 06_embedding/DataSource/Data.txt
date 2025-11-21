@@ -1,1 +1,4 @@
-
+The Cat Sat on the mat
+The Dog Sat on the log
+The Cat chased the mouse
+the Dog Chased the Cat.
